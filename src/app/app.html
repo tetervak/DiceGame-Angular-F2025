@@ -1,12 +1,16 @@
 <app-my-header></app-my-header>
 <main>
   <h2>Roll the Dice</h2>
-  <p>
-    <img src="/images/dice/side_{{diceValue}}.png" alt="side_{{diceValue}}">
-  </p>
-  <p>
-    Dice Value: {{diceValue}}
-  </p>
+  @if (rollData != undefined){
+    <p>
+      @for (diceValue of rollData.values; track $index){
+        <img src="/images/dice/side_{{diceValue}}.png" alt="side_{{diceValue}}">
+      }
+    </p>
+    <p>
+      Total: {{rollData.total}}
+    </p>
+  }
   <p>
     <button (click)="onRollDice()">Roll Dice</button>
   </p>
