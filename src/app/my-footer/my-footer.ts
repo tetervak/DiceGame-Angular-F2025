@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
+import {DatePipe} from '@angular/common';
 
 @Component({
   selector: 'app-my-footer',
-  imports: [],
+  imports: [
+    DatePipe
+  ],
   templateUrl: './my-footer.html',
   styleUrl: './my-footer.css'
 })
 export class MyFooter {
-
+ today: Date = new Date();
 }
