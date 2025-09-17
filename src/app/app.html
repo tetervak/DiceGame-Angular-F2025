@@ -11,11 +11,7 @@
     </select>
   </p>
   @if (rollData != undefined){
-    <p>
-      @for (diceValue of rollData.values; track $index){
-        <img src="/images/dice/side_{{diceValue}}.png" alt="side_{{diceValue}}">
-      }
-    </p>
+    <app-dice-display [values]="rollData.values"></app-dice-display>
     <p>
       Total: {{rollData.total}}
     </p>

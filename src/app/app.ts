@@ -3,6 +3,7 @@ import {MyHeader} from './my-header/my-header';
 import {MyFooter} from './my-footer/my-footer';
 import {RollData} from './roll-data';
 import {FormsModule} from '@angular/forms';
+import {DiceDisplay} from './dice-display/dice-display';
 
 
 @Component({
@@ -10,7 +11,8 @@ import {FormsModule} from '@angular/forms';
   imports: [
     MyHeader,
     MyFooter,
-    FormsModule
+    FormsModule,
+    DiceDisplay
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

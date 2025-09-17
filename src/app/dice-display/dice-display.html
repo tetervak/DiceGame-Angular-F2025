@@ -1,0 +1,7 @@
+@if (values != undefined){
+  <p>
+    @for (diceValue of values; track $index){
+      <img src="/images/dice/side_{{diceValue}}.png" alt="side_{{diceValue}}">
+    }
+  </p>
+}
