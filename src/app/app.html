@@ -1,6 +1,15 @@
 <app-my-header></app-my-header>
 <main>
   <h2>Roll the Dice</h2>
+  <p>
+    Number of dice: {{numberOfDice}}
+    <select [(ngModel)]="numberOfDice">
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+      <option value="4">Four</option>
+    </select>
+  </p>
   @if (rollData != undefined){
     <p>
       @for (diceValue of rollData.values; track $index){

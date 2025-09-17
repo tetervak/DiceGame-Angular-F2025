@@ -1,14 +1,16 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import {MyHeader} from './my-header/my-header';
 import {MyFooter} from './my-footer/my-footer';
 import {RollData} from './roll-data';
+import {FormsModule} from '@angular/forms';
 
 
 @Component({
   selector: 'app-root',
   imports: [
     MyHeader,
-    MyFooter
+    MyFooter,
+    FormsModule
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
